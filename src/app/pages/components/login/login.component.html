@@ -1,0 +1,21 @@
+<div class="login-page">
+    <h3 class="center">LOGIN</h3>
+    <div class="form">
+        <form class="register-form">
+            <input type="text" placeholder="name"   />
+            <input type="password" placeholder="password" />
+            <input type="text" placeholder="email address" />
+            <button>create</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+        </form>
+        <form class="login-form">
+            <input type="text" placeholder="username" [(ngModel)]="loginObj.EmailId" name="EmailId"/>
+            <input type="password" placeholder="password"  [(ngModel)]="loginObj.Password" name="Password"/>
+            <button (click)="onLogin()">login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+        </form>
+    </div>
+</div>
+
+<h4>ALERT</h4>
+<app-alert-banner [alertType]="'error'" [alertMessage]="fromLayout"></app-alert-banner>

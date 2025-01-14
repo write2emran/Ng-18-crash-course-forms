@@ -1,0 +1,9 @@
+<div class="col-md-12">
+    <div class="alert" [ngClass]="{'alert-primary': alertType == 'success', 'alert-danger': alertType == 'error'}">
+        <strong>{{alertType}}</strong> {{alertMessage}}
+        <app-button
+            (onBtnClick)="onClose($event)"
+            [buttonClass]="'btn-primary'" 
+            [buttonLabel]="'close Layout'"></app-button>
+    </div>
+</div>
